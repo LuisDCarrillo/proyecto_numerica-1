@@ -27,7 +27,7 @@ while iter < max_iter
 
   %Estructura condicional de la division por 0
 
-  if=dfx==0
+  if dfx == 0
     error('Derivada cerox=%.6f',x_actual);
   end
 x_sig = x_actual - fx / dfx;
