@@ -1,4 +1,5 @@
 % Script principal para ejecutar los métodos de búsqueda de raíces
+pkg load symbolic; % Cargar el paquete simbólico
 clear;
 clc;
 
@@ -8,7 +9,7 @@ metodo = menu('Seleccione el método:', 'Newton', 'Bisección', 'Secante');
 % Ingresar la función como string y convertir a simbólica
 funcion_str = inputdlg('Ingrese la función f(x):', 'Función');
 syms x;
-f = str2sym(funcion_str{1});
+f = sym(funcion_str{1});
 
 % Ingresar tolerancia
 TOL = input('Ingrese la tolerancia TOL: ');

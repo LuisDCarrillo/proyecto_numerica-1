@@ -1,9 +1,9 @@
 % Script para el metodo de newton
-funtion[raiz,iter]=newton(f,x0,TOL,max_iter,a_plot,b_plot)
+function[raiz,iter]=newton(f,x0,TOL,max_iter,a_plot,b_plot)
 syms x;
 df=diff(f,x);
-f_handle= matlabFuntion(f);
-df_handle= matlabFuntion(df);
+f_handle= matlabFunction(f);
+df_handle= matlabFunction(df);
 
 iter=0;
 x_actual=x0;
