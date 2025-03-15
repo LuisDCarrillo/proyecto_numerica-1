@@ -1,9 +1,9 @@
 % Script para el metodo de newton
-funtion[raiz,iter]=newton(f,x0,TOL,max_iter,a_plot,b_plot)
+function[raiz,iter]=newton(f,x0,TOL,max_iter,a_plot,b_plot)
 syms x;
 df=diff(f,x);
-f_handle= matlabFuntion(f);
-df_handle= matlabFuntion(df);
+f_handle= matlabFunction(f);
+df_handle= matlabFunction(df);
 
 iter=0;
 x_actual=x0;
@@ -27,7 +27,7 @@ while iter < max_iter
 
   %Estructura condicional de la division por 0
 
-  if=dfx==0
+  if dfx==0
     error('Derivada cerox=%.6f',x_actual);
   end
 x_sig = x_actual - fx / dfx;

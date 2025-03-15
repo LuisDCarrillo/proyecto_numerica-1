@@ -2,13 +2,13 @@
 clear;
 clc;
 
-% Menú para seleccionar el método
+% Variable para seleccionar el método
 metodo = menu('Seleccione el método:', 'Newton', 'Bisección', 'Secante');
 
 % Ingresar la función como string y convertir a simbólica
 funcion_str = inputdlg('Ingrese la función f(x):', 'Función');
 syms x;
-f = str2sym(funcion_str{1});
+f = sym(funcion_str{1});
 
 % Ingresar tolerancia
 TOL = input('Ingrese la tolerancia TOL: ');
