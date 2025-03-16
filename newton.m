@@ -1,3 +1,4 @@
+
 function [raiz, iter] = newton(f, x0, TOL, max_iter, a_plot, b_plot)
     % Método de Newton-Raphson para encontrar raíces de funciones
     % Inputs:
@@ -9,6 +10,8 @@ function [raiz, iter] = newton(f, x0, TOL, max_iter, a_plot, b_plot)
     % Outputs:
     %   raiz: Aproximación de la raíz encontrada
     %   iter: Número de iteraciones realizadas
+
+
 
     syms x;
     df = diff(f, x);                % Calcular derivada simbólica
@@ -44,6 +47,7 @@ function [raiz, iter] = newton(f, x0, TOL, max_iter, a_plot, b_plot)
         % ========== FÓRMULA DE NEWTON-RAPHSON ==========
         x_sig = x_actual - fx / dfx;           % Calcular siguiente iterado
         error_rel = abs((x_sig - x_actual)/x_sig);  % Error relativo porcentual
+
 
         % ========== ACTUALIZACIÓN GRÁFICA ==========
         plot(x_sig, f_handle(x_sig), 'ro', 'MarkerFaceColor', 'r');  % Marcar iteración actual

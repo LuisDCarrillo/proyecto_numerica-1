@@ -3,7 +3,6 @@
 % Este programa permite resolver ecuaciones no lineales usando tres métodos:
 % 1. Newton-Raphson   2. Bisección   3. Secante
 % -------------------------------------------------------------------------
-
 % ========================= CONFIGURACIÓN INICIAL =========================
 pkg load symbolic;        % Cargar paquete para cálculos simbólicos
 clear;                    % Limpiar variables del workspace
@@ -11,13 +10,16 @@ clc;                      % Limpiar consola
 
 % ======================== SELECCIÓN DEL MÉTODO ==========================
 % Crear menú interactivo para que el usuario elija el método numérico
+
 metodo = menu('Seleccione el método:', 'Newton', 'Bisección', 'Secante');
 
 % ======================== INGRESO DE LA FUNCIÓN =========================
 % Obtener la función del usuario como cadena de texto y convertir a forma simbólica
 funcion_str = inputdlg('Ingrese la función f(x):', 'Función');
+
 syms x;                   % Declarar variable simbólica
 f = sym(funcion_str{1});  % Convertir string a función simbólica
+
 
 % ======================= CONFIGURACIÓN DE TOLERANCIA =====================
 TOL = str2double(inputdlg('Ingrese la tolerancia TOL: '));  % Convertir entrada a número
